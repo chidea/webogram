@@ -1,14 +1,14 @@
 ;(function initAutoUpgrade () {
 
   // Prevent click-jacking
-  try {
+  /*try {
     if (window == window.top || window.chrome && chrome.app && chrome.app.window) {
       document.documentElement.style.display = 'block';
     } else {
       top.location = self.location;
     }
   } catch (e) {console.error('CJ protection', e)};
-
+  */
   window.safeConfirm = function (params, callback) {
     if (typeof params === 'string') {
       params = {message: params};
